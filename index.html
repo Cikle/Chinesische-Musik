@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinesische Musikgeschichte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="overlay">
+            <h1>Die Geschichte der chinesischen Musik</h1>
+        </div>
+    </header>
+
+    <div class="button-container">
+        <button class="button" onclick="showContent('instrumente')">Instrumente entdecken</button>
+        <button class="button" onclick="showContent('roadmap')">Roadmap der Geschichte</button>
+    </div>
+
+    <section id="content">
+        <div id="instrumente" class="content-section">
+            <h2>Wichtige traditionelle Instrumente</h2>
+            <div class="instrument-container">
+                <div class="instrument">
+                    <img src="guqin.jpg" alt="Guqin">
+                    <p><strong>Guqin</strong>: Ein altes Saiteninstrument mit tiefer kultureller Bedeutung.</p>
+                </div>
+                <div class="instrument">
+                    <img src="erhu.jpg" alt="Erhu">
+                    <p><strong>Erhu</strong>: Ein zweisaitiges Streichinstrument, das melancholische Melodien erzeugt.</p>
+                </div>
+                <div class="instrument">
+                    <img src="pipa.jpg" alt="Pipa">
+                    <p><strong>Pipa</strong>: Ein Zupfinstrument mit vier Saiten, das komplexe Töne erzeugen kann.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="roadmap" class="content-section" style="display:none;">
+            <h2>Roadmap der Geschichte</h2>
+            <p>Verfolgt die wichtigsten Epochen der chinesischen Musikgeschichte auf einem Zeitstrahl.</p>
+            <img src="timeline.jpg" alt="Roadmap der chinesischen Musikgeschichte" class="roadmap-image">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Chinesische Musikgeschichte</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
