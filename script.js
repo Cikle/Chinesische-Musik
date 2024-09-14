@@ -17,3 +17,10 @@ function showContent(sectionId, button) {
     // Den aktiven Button hervorheben
     button.classList.add('active');
 }
+function showPopup(instrumentId) {
+    document.getElementById(instrumentId + '-popup').style.display = 'flex';
+}
+
+function closePopup(instrumentId) {
+    document.getElementById(instrumentId + '-popup').style.display = 'none';
+}

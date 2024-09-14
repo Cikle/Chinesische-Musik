@@ -97,44 +97,29 @@ p {
 .instrument-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    /* Space between cards */
+    justify-content: space-around;
 }
 
 .instrument {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(33.333% - 20px);
-    /* Adjust width for the number of columns */
+    width: 30%;
+    margin: 20px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
-    /* Optional: Add border for better visibility */
-    border-radius: 8px;
-    /* Optional: Rounded corners */
-    padding: 15px;
-    background-color: #fff;
-    /* Optional: Background color */
-    min-height: 300px;
-    /* Set a minimum height */
 }
 
 .instrument img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    /* Optional: Border below image */
-    margin-bottom: 10px;
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
 }
 
 .instrument p {
-    margin: 10px 0;
+    text-align: justify;
 }
 
 .instrument audio {
-    margin-top: 10px;
+    width: 100%;
 }
+
 
 
 .instrument img {
@@ -156,8 +141,8 @@ p {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #333333;
+    color: #ccc;
     padding: 2rem;
     text-align: center;
 }
