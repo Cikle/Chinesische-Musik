@@ -1,4 +1,4 @@
-/* Allgemeine Stile */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     color: #333;
     line-height: 1.6;
     background-color: #f9f9f9;
@@ -14,8 +14,8 @@ body {
 
 header {
     position: relative;
-    height: 50vh; /* Kürzeres Titelbild */
-    background: url('chinese_background.jpg') no-repeat center center/cover;
+    height: 50vh;
+    background: url('title.jpeg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,15 @@ header {
     text-align: center;
 }
 
+.title-photo {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
 h1 {
+    font-family: 'Noto Serif', serif;
     font-size: 2.5rem;
     font-weight: 300;
     letter-spacing: 2px;
@@ -43,17 +51,24 @@ h1 {
 
 .button {
     padding: 0.8rem 1.5rem;
-    background-color: #d32f2f;
-    color: white;
+    background-color: transparent;
+    color: #d32f2f;
     border: none;
-    border-radius: 5px;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
-    background-color: #b71c1c;
+    color: #b71c1c;
+    border-bottom: 3px solid #b71c1c;
+    transform: scale(1.1);
+}
+
+.button.active {
+    border-bottom: 3px solid #d32f2f;
 }
 
 section {
@@ -64,6 +79,7 @@ section {
 }
 
 h2 {
+    font-family: 'Noto Serif', serif;
     font-size: 2rem;
     color: #d32f2f;
     margin-bottom: 1.5rem;
@@ -74,17 +90,52 @@ p {
     color: #555;
 }
 
+#instrumente {
+    padding: 20px;
+}
+
 .instrument-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
+    /* Space between cards */
 }
 
 .instrument {
-    flex-basis: 30%;
-    margin-bottom: 2rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(33.333% - 20px);
+    /* Adjust width for the number of columns */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    /* Optional: Add border for better visibility */
+    border-radius: 8px;
+    /* Optional: Rounded corners */
+    padding: 15px;
+    background-color: #fff;
+    /* Optional: Background color */
+    min-height: 300px;
+    /* Set a minimum height */
 }
+
+.instrument img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    /* Optional: Border below image */
+    margin-bottom: 10px;
+}
+
+.instrument p {
+    margin: 10px 0;
+}
+
+.instrument audio {
+    margin-top: 10px;
+}
+
 
 .instrument img {
     max-width: 100%;
@@ -109,6 +160,66 @@ footer {
     color: #fff;
     padding: 2rem;
     text-align: center;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #d32f2f;
+}
+
+.timeline-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.5rem;
+    color: #d32f2f;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* List Styles */
+ul.no-bullets {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.no-bullets li {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+ul.no-bullets li strong {
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 /* Responsive Design */

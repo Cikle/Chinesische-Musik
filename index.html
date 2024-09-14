@@ -1,53 +1,394 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinesische Musikgeschichte</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap">
 </head>
+
 <body>
     <header>
         <div class="overlay">
             <h1>Die Geschichte der chinesischen Musik</h1>
+            <img src="photo/title.jpg" alt="Chinesische Musik" class="title-photo">
         </div>
     </header>
 
     <div class="button-container">
-        <button class="button" onclick="showContent('instrumente')">Instrumente entdecken</button>
-        <button class="button" onclick="showContent('roadmap')">Roadmap der Geschichte</button>
+        <button class="button active" onclick="showContent('instrumente', this)">Instrumente entdecken</button>
+        <button class="button" onclick="showContent('roadmap', this)">Roadmap der Geschichte</button>
+        <button class="button" onclick="showContent('influences', this)">Einflüsse und Stile</button>
+        <button class="button" onclick="showContent('goals', this)">Forschungsziele</button>
     </div>
 
-    <section id="content">
-        <div id="instrumente" class="content-section">
-            <h2>Wichtige traditionelle Instrumente</h2>
-            <div class="instrument-container">
-                <div class="instrument">
-                    <img src="guqin.jpg" alt="Guqin">
-                    <p><strong>Guqin</strong>: Ein altes Saiteninstrument mit tiefer kultureller Bedeutung.</p>
-                </div>
-                <div class="instrument">
-                    <img src="erhu.jpg" alt="Erhu">
-                    <p><strong>Erhu</strong>: Ein zweisaitiges Streichinstrument, das melancholische Melodien erzeugt.</p>
-                </div>
-                <div class="instrument">
-                    <img src="pipa.jpg" alt="Pipa">
-                    <p><strong>Pipa</strong>: Ein Zupfinstrument mit vier Saiten, das komplexe Töne erzeugen kann.</p>
+    <main>
+        <section id="content">
+            <div id="instrumente" class="content-section">
+                <h2>Wichtige traditionelle Instrumente</h2>
+                <div class="instrument-container">
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Guqin_-_004.JPG/800px-Guqin_-_004.JPG"
+                            alt="Guqin">
+                        <p><strong>Guqin</strong>: Ein antikes Saiteninstrument mit sieben Saiten, das seit mehr als
+                            3.000 Jahren in China gespielt wird. Es wurde in der Zhou-Dynastie dokumentiert und ist eng
+                            mit der literarischen und philosophischen Tradition verbunden.</p>
+                        <p><em>Zeit: Über 3000 v.Chr., Dynastie: Zhou</em></p>
+                        <audio controls>
+                            <source src="path/to/guqin-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
+
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Erhu%2C_an_ancient_Chinese_two-stringed_instrument.JPG/800px-Erhu%2C_an_ancient_Chinese_two-stringed_instrument.JPG"
+                            alt="Erhu">
+                        <p><strong>Erhu</strong>: Ein zweisaitiges Streichinstrument, auch bekannt als "chinesische
+                            Geige". Es hat sich im Laufe der Zeit weiterentwickelt und ist besonders in der
+                            Song-Dynastie populär geworden.</p>
+                        <p><em>Zeit: Über 1000 Jahre alt, Dynastie: Song</em></p>
+                        <audio controls>
+                            <source src="path/to/erhu-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
+
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Pipa_%28Chinese_lute%29.JPG/800px-Pipa_%28Chinese_lute%29.JPG"
+                            alt="Pipa">
+                        <p><strong>Pipa</strong>: Ein Zupfinstrument mit vier Saiten, bekannt für seine virtuosen
+                            Spieltechniken. Die Pipa wurde besonders während der Tang-Dynastie populär und verbreitete
+                            sich über die Seidenstraße nach Zentralasien.</p>
+                        <p><em>Zeit: Über 2000 Jahre alt, Dynastie: Tang</em></p>
+                        <audio controls>
+                            <source src="path/to/pipa-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
+
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Dizi_%28Chinese_flu%29.jpg/800px-Dizi_%28Chinese_flu%29.jpg"
+                            alt="Dizi">
+                        <p><strong>Dizi</strong>: Eine traditionelle Bambusflöte, die für ihren klaren und lebhaften
+                            Klang bekannt ist. Die Dizi hat sich seit der Song-Dynastie in verschiedenen Musikstilen
+                            etabliert.</p>
+                        <p><em>Zeit: Über 1000 Jahre alt, Dynastie: Song</em></p>
+                        <audio controls>
+                            <source src="path/to/dizi-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
+
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Yangqin_%28Chinese_hammered_dulcimer%29.JPG/800px-Yangqin_%28Chinese_hammered_dulcimer%29.JPG"
+                            alt="Yangqin">
+                        <p><strong>Yangqin</strong>: Ein chinesisches Hammerklavier, das für seinen vollen und
+                            harmonischen Klang geschätzt wird. Es wurde während der Qing-Dynastie eingeführt und ist
+                            heute häufig in Orchestern und Ensembles zu hören.</p>
+                        <p><em>Zeit: Über 200 Jahre alt, Dynastie: Qing</em></p>
+                        <audio controls>
+                            <source src="path/to/yangqin-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
+
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Fangxiang%2C_Ancient_Chinese_Bronze_Instrument.JPG/800px-Fangxiang%2C_Ancient_Chinese_Bronze_Instrument.JPG"
+                            alt="Fangxiang">
+                        <p><strong>Fangxiang</strong>: Ein antikes chinesisches Glockenspiel, das aus Bronze gegossen
+                            wurde. Es wurde in der Zhou-Dynastie verwendet und spielte eine wichtige Rolle in Ritualen
+                            und Zeremonien.</p>
+                        <p><em>Zeit: Über 3000 Jahre alt, Dynastie: Zhou</em></p>
+                        <audio controls>
+                            <source src="path/to/fangxiang-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
+
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Zhuyan_%28Ancient_Chinese_Drum%29.JPG/800px-Zhuyan_%28Ancient_Chinese_Drum%29.JPG"
+                            alt="Zhuyan">
+                        <p><strong>Zhuyan</strong>: Ein traditionelles chinesisches Schlaginstrument, das oft bei
+                            religiösen und festlichen Anlässen verwendet wurde. Es hat einen tiefen, resonanten Klang.
+                        </p>
+                        <p><em>Zeit: Über 3000 Jahre alt, Dynastie: Zhou</em></p>
+                        <audio controls>
+                            <source src="path/to/zhuyan-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
+
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Luogu_%28Ancient_Chinese_Drum%29.JPG/800px-Luogu_%28Ancient_Chinese_Drum%29.JPG"
+                            alt="Luogu">
+                        <p><strong>Luogu</strong>: Ein traditionelles chinesisches Schlaginstrument, das aus einer
+                            Kombination von Trommeln und Becken besteht. Es wird oft in Festlichkeiten und Zeremonien
+                            verwendet.</p>
+                        <p><em>Zeit: Über 2000 Jahre alt, Dynastie: Han</em></p>
+                        <audio controls>
+                            <source src="path/to/luogu-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
+
+                    <div class="instrument">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Xun_%28Ancient_Chinese_Ton_Instrument%29.JPG/800px-Xun_%28Ancient_Chinese_Ton_Instrument%29.JPG"
+                            alt="Xun">
+                        <p><strong>Xun</strong>: Ein uraltes chinesisches Toninstrument, das aus Ton gefertigt wird. Es
+                            hat einen charakteristischen, warmen Klang und wird oft in der traditionellen chinesischen
+                            Musik verwendet.</p>
+                        <p><em>Zeit: Über 2000 Jahre alt, Dynastie: Han</em></p>
+                        <audio controls>
+                            <source src="path/to/xun-sample.mp3" type="audio/mpeg">
+                            Ihr Browser unterstützt dieses Audio-Element nicht.
+                        </audio>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="roadmap" class="content-section" style="display:none;">
-            <h2>Roadmap der Geschichte</h2>
-            <p>Verfolgt die wichtigsten Epochen der chinesischen Musikgeschichte auf einem Zeitstrahl.</p>
-            <img src="timeline.jpg" alt="Roadmap der chinesischen Musikgeschichte" class="roadmap-image">
-        </div>
-    </section>
+
+
+            <div id="roadmap" class="content-section" style="display:none;">
+                <h2>Roadmap der Geschichte</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-index="0">
+                        <div class="timeline-content">
+                            <h3>3000 v.Chr.</h3>
+                            <p>Früheste bekannte Musikformen in China, darunter Schlaginstrumente wie die
+                                <strong>Fangxiang</strong> (metallisches Glockenspiel) und die <strong>Zhuyan</strong>
+                                (antikes Schlagzeug). Diese Instrumente wurden oft in religiösen Zeremonien verwendet.
+                            </p>
+                            <audio controls>
+                                <source src="path/to/fangxiang-sample.mp3" type="audio/mpeg">
+                                Ihr Browser unterstützt dieses Audio-Element nicht.
+                            </audio>
+                            <audio controls>
+                                <source src="path/to/zhuyan-sample.mp3" type="audio/mpeg">
+                                Ihr Browser unterstützt dieses Audio-Element nicht.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-index="1">
+                        <div class="timeline-content">
+                            <h3>2000 v.Chr.</h3>
+                            <p>Die Entwicklung von Streichinstrumenten wie der <strong>Guqin</strong>, die zu einem
+                                Symbol für die literarische und kulturelle Elite Chinas wurde. Die Zhou-Dynastie
+                                dokumentierte und klassifizierte Musikinstrumente systematisch.</p>
+                            <audio controls>
+                                <source src="path/to/guqin-sample.mp3" type="audio/mpeg">
+                                Ihr Browser unterstützt dieses Audio-Element nicht.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-index="2">
+                        <div class="timeline-content">
+                            <h3>500 v.Chr.</h3>
+                            <p>Die Einführung der <strong>Erhu</strong>, die sich als bedeutendes Instrument der
+                                chinesischen Musik etabliert hat. Die Erhu wurde in verschiedenen Musikstilen verwendet,
+                                darunter klassische Musik und traditionelle Opern.</p>
+                            <audio controls>
+                                <source src="path/to/erhu-sample.mp3" type="audio/mpeg">
+                                Ihr Browser unterstützt dieses Audio-Element nicht.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-index="3">
+                        <div class="timeline-content">
+                            <h3>1000 n.Chr.</h3>
+                            <p>Die <strong>Pipa</strong> verbreitete sich über die Seidenstraße nach Zentralasien. Die
+                                Pipa
+                                wird für ihre virtuosen Spieltechniken geschätzt.</p>
+                            <audio controls>
+                                <source src="path/to/pipa-sample.mp3" type="audio/mpeg">
+                                Ihr Browser unterstützt dieses Audio-Element nicht.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-index="4">
+                        <div class="timeline-content">
+                            <h3>1600 n.Chr.</h3>
+                            <p>Einführung des <strong>Yangqin</strong>, das in der Qing-Dynastie als bedeutendes
+                                Hammerklavier-Instrument eingeführt wird. Es findet Anwendung in Orchestern und
+                                Ensembles und ist bekannt für seinen harmonischen Klang.</p>
+                            <audio controls>
+                                <source src="path/to/yangqin-sample.mp3" type="audio/mpeg">
+                                Ihr Browser unterstützt dieses Audio-Element nicht.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-index="5">
+                        <div class="timeline-content">
+                            <h3>20. Jahrhundert</h3>
+                            <p>Moderne Entwicklungen in der chinesischen Musik, die neue Musikstile und Technologien
+                                einbeziehen. Traditionelle Instrumente wie die <strong>Dizi</strong> und
+                                <strong>Pipa</strong>
+                                werden weiterhin geschätzt, während neue Stile die Musiklandschaft bereichern.
+                            </p>
+                            <audio controls>
+                                <source src="path/to/dizi-sample.mp3" type="audio/mpeg">
+                                Ihr Browser unterstützt dieses Audio-Element nicht.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-index="6">
+                        <div class="timeline-content">
+                            <h3>21. Jahrhundert</h3>
+                            <p>Fortsetzung der Fusion traditioneller und moderner Musikstile, verstärkter Einsatz
+                                digitaler
+                                Medien und globaler Einfluss auf die chinesische Musikszene. Die chinesische Musik
+                                bleibt ein
+                                dynamisches Feld mit ständiger Weiterentwicklung und Innovation.</p>
+                            <p>(Little Apple by Chopstick Brothers)</p>
+                            <audio controls>
+                                <source
+                                    src="audio/timeline/Little Apple by Chopstick Brothers [English, Chinese & Pinyin].mp3"
+                                    type="audio/mpeg">
+                                Ihr Browser unterstützt dieses Audio-Element nicht.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="influences" class="content-section" style="display:none;">
+                <h2>Einflüsse und Stile</h2>
+                <p>Die chinesische Musiktradition ist reich an Einflüssen und Stilen, die über Jahrhunderte hinweg
+                    entstanden sind. Diese Einflüsse sind durch kulturelle Austauschprozesse, geografische Erlebnisse
+                    und historische Ereignisse geprägt.</p>
+                <br>
+                <h3>Einflüsse der Seidenstraße</h3>
+                <p>Die Seidenstraße, ein historisches Netzwerk von Handelswegen, spielte eine entscheidende Rolle bei
+                    der Verbreitung und dem Austausch von Musikinstrumenten und -stilen zwischen Ost und West. Während
+                    der Tang-Dynastie (618-907 n.Chr.) gelangten viele westliche Musikinstrumente und -techniken nach
+                    China. Die Einführung von Instrumenten wie der <strong>Pipa</strong> (chinesische Laute) und der
+                    <strong>Dizi</strong> (Bambusflöte) zeigt den kulturellen Austausch und die Adaptation westlicher
+                    Einflüsse in der chinesischen Musik.
+                </p>
+                <br>
+                <h3>Einflüsse der buddhistischen Musik</h3>
+                <p>Die Verbreitung des Buddhismus in China hatte einen tiefgreifenden Einfluss auf die Musik. Die
+                    Einführung buddhistischer Musik und Riten führte zur Schaffung von Musikstücken und -stilen, die
+                    spezifisch für religiöse Zeremonien waren. Instrumente wie die <strong>Guqin</strong> wurden in
+                    meditativen und spirituellen Kontexten verwendet, um eine tiefere Verbindung zur Religion und zu
+                    spirituellen Praktiken herzustellen.</p>
+                <br>
+                <h3>Einflüsse der Mongolischen und Manchu-Kulturen</h3>
+                <p>Während der Yuan-Dynastie (1271-1368) und der Qing-Dynastie (1644-1912) beeinflussten die
+                    mongolischen und manchurischen Kulturen die chinesische Musik. Die mongolischen und manchurischen
+                    Musiker brachten neue Musikinstrumente und -stile nach China, die in die traditionelle chinesische
+                    Musik integriert wurden. Der Einsatz von Instrumenten wie der <strong>Morin Khuur</strong>
+                    (mongolische Pferdekopfgeige) erweiterte die Palette der verfügbaren Klänge und Stile.</p>
+                <br>
+                <h3>Moderne Einflüsse und Fusion</h3>
+                <p>Im 20. Jahrhundert begann die chinesische Musikszene, moderne westliche Einflüsse zu integrieren. Die
+                    Einführung von Popmusik, Jazz und elektronischer Musik führte zu einer Fusion von traditionellen und
+                    modernen Stilen. Die Verwendung traditioneller Instrumente wie der <strong>Erhu</strong> in modernen
+                    Pop- und Rockmusikproduktionen zeigt, wie die chinesische Musik weiterhin dynamisch und
+                    anpassungsfähig ist.</p>
+                <br>
+                <h3>Regionale Stile</h3>
+                <p>China ist ein großes Land mit einer Vielzahl von ethnischen Gruppen, und jede Region hat ihre eigenen
+                    Musikstile und -traditionen. Die südchinesische Musik unterscheidet sich oft erheblich von der Musik
+                    im Norden. Zum Beispiel ist die Musik der Jiangnan-Region bekannt für ihre sanften und eleganten
+                    Klänge, während die Musik aus der Region Xinjiang oft kräftige und lebhafte Rhythmen aufweist. Diese
+                    regionalen Unterschiede tragen zur Vielfalt der chinesischen Musik bei.</p>
+                <br>
+                <p>Die kontinuierliche Entwicklung und der Austausch von Stilen und Einflüssen machen die chinesische
+                    Musik zu einem reichen und dynamischen Teil des kulturellen Erbes Chinas. Von antiken Traditionen
+                    bis hin zu modernen Innovationen bleibt die chinesische Musik ein faszinierendes Feld für kulturelle
+                    Erforschung und künstlerische Ausdrucksformen.</p>
+            </div>
+
+
+
+            <div id="goals" class="content-section" style="display:none;">
+                <h2>Forschungsziele</h2>
+
+                <p>Die Erforschung der chinesischen Musikgeschichte ist ein faszinierendes Unterfangen, das viele
+                    Aspekte der kulturellen, sozialen und politischen Entwicklung Chinas umfasst. Unser Ziel ist es, ein
+                    umfassendes Verständnis der evolutionären Entwicklungen in der chinesischen Musik zu erlangen und
+                    die Auswirkungen dieser Entwicklungen auf die heutige Musiklandschaft zu untersuchen. Die folgenden
+                    Forschungsziele stehen im Mittelpunkt unseres Projekts:</p>
+                <br>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li>
+                        <strong>Untersuchung der Entwicklung traditioneller chinesischer Instrumente</strong> <br>
+                        Diese Forschung zielt darauf ab, die historische Entwicklung traditioneller chinesischer
+                        Musikinstrumente von den frühesten Formen bis hin zu ihren modernen Varianten zu dokumentieren.
+                        Wir analysieren, wie sich Instrumente wie das <strong>Guqin</strong>, die <strong>Erhu</strong>
+                        und die <strong>Pipa</strong> über die verschiedenen Dynastien hinweg verändert haben und welche
+                        kulturellen und technischen Einflüsse zu diesen Veränderungen geführt haben.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Analyse der Auswirkungen der Seidenstraße</strong> <br>
+                        Die Seidenstraße war ein bedeutender Handelsweg, der nicht nur Waren, sondern auch kulturelle
+                        und musikalische Einflüsse zwischen Ost und West transferierte. Wir untersuchen, wie diese
+                        Handelsverbindungen die chinesische Musik beeinflusst haben, einschließlich der Einführung neuer
+                        Instrumente und Musikstile, und welche langfristigen Auswirkungen diese Einflüsse auf die
+                        chinesische Musiktradition hatten.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Erforschung der Wechselwirkungen zwischen religiösen Ritualen und musikalischen
+                            Praktiken</strong> <br>
+                        In der frühen chinesischen Geschichte spielte Musik eine wesentliche Rolle in religiösen
+                        Zeremonien und Ritualen. Unser Ziel ist es, die Verbindung zwischen Musik und religiösen
+                        Praktiken zu erforschen und zu verstehen, wie Musik in verschiedenen religiösen Kontexten
+                        verwendet wurde, um spirituelle und gesellschaftliche Ziele zu erreichen.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Studie der Einflüsse der westlichen Musik auf die moderne chinesische
+                            Musikszene</strong> <br>
+                        Im 20. und 21. Jahrhundert hat die westliche Musik einen erheblichen Einfluss auf die
+                        chinesische Musikszene ausgeübt. Wir analysieren, wie westliche Musikstile und -techniken in die
+                        chinesische Musik integriert wurden und welche Auswirkungen diese Fusion auf die Entwicklung
+                        moderner chinesischer Musikgenres hatte.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Dokumentation der Veränderungen in der chinesischen Musiktradition im 20. und 21.
+                            Jahrhundert</strong> <br>
+                        Die letzten beiden Jahrhunderte haben eine Reihe bedeutender Veränderungen in der chinesischen
+                        Musiktradition mit sich gebracht. Wir dokumentieren diese Veränderungen, einschließlich der
+                        Einflussnahme durch soziale, politische und technologische Entwicklungen, und untersuchen, wie
+                        diese Faktoren die heutige Musikszene prägen.
+                    </li>
+                </ul>
+                <br>
+                <p>Durch diese Forschung wollen wir ein tieferes Verständnis für die Komplexität und Vielfalt der
+                    chinesischen Musikgeschichte gewinnen und die kulturelle Bedeutung der Musik in verschiedenen
+                    historischen und modernen Kontexten herausarbeiten. Unsere Ergebnisse sollen dazu beitragen, das
+                    Bewusstsein für die Reichtümer der chinesischen Musiktradition zu fördern und deren Erbe für
+                    zukünftige Generationen zu bewahren.</p>
+            </div>
+
+
+        </section>
+    </main>
 
     <footer>
-        <p>© 2024 Chinesische Musikgeschichte</p>
+        <p>&copy; 2024 Chinesische Musikgeschichte. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function showContent(sectionId, button) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.querySelectorAll('.button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            button.classList.add('active');
+        }
+    </script>
 </body>
+
 </html>
