@@ -17,9 +17,9 @@
             <img src="photo/title.jpg" alt="Ein Geschichts Projekt" class="title-photo">
         </div>
         <button id="sound-toggle" class="sound-button" onclick="toggleSound()">🔊</button>
-        <!-- Background music -->
         <audio id="background-music" loop autoplay>
             <source src="audio/timeline/Little Apple by Chopstick Brothers [English, Chinese & Pinyin].mp3" type="audio/mp3">
+            Ihr Browser unterstützt das Audio-Tag nicht.
         </audio>
     </header>
 
@@ -27,7 +27,7 @@
         <button class="button active" onclick="showContent('instrumente', this)">Instrumente entdecken</button>
         <button class="button" onclick="showContent('roadmap', this)">Roadmap der Geschichte</button>
         <button class="button" onclick="showContent('influences', this)">Einflüsse und Stile</button>
-        <button class="button" onclick="showContent('goals', this)">Forschungsziele</button>
+        <button class="button" onclick="showContent('goals', this)">Ziel des Projekts</button>
     </div>
 
     <main>
@@ -302,13 +302,13 @@
 
 
             <div id="goals" class="content-section" style="display:none;">
-                <h2>Forschungsziele</h2>
+                <h2>Ziel des Projekts</h2>
 
                 <p>Die Erforschung der chinesischen Musikgeschichte ist ein faszinierendes Unterfangen, das viele
                     Aspekte der kulturellen, sozialen und politischen Entwicklung Chinas umfasst. Unser Ziel ist es, ein
                     umfassendes Verständnis der evolutionären Entwicklungen in der chinesischen Musik zu erlangen und
                     die Auswirkungen dieser Entwicklungen auf die heutige Musiklandschaft zu untersuchen. Die folgenden
-                    Forschungsziele stehen im Mittelpunkt unseres Projekts:</p>
+                    Ziele stehen im Mittelpunkt unseres Projekts:</p>
                 <br>
                 <ul style="list-style-type: none; padding: 0;">
                     <li>
@@ -371,7 +371,6 @@
     <footer>
         <p>&copy; 2024 Chinesische Musikgeschichte. Alle Rechte vorbehalten.</p>
     </footer>
-
     <script>
         function showContent(sectionId, button) {
             document.querySelectorAll('.content-section').forEach(section => {
@@ -383,7 +382,27 @@
             document.getElementById(sectionId).style.display = 'block';
             button.classList.add('active');
         }
+        
+        function toggleSound() {
+            var music = document.getElementById("background-music");
+            var soundButton = document.getElementById("sound-toggle");
+            
+            if (music.muted) {
+                music.muted = false;
+                soundButton.textContent = '🔊'; // Change icon to "sound on"
+            } else {
+                music.muted = true;
+                soundButton.textContent = '🔇'; // Change icon to "sound off"
+            }
+        }
+    
+        // Ensure that the audio is not muted by default
+        document.addEventListener('DOMContentLoaded', function() {
+            var music = document.getElementById("background-music");
+            music.muted = false; // Set to false if you want sound by default
+        });
     </script>
+    
 </body>
 
 </html>
