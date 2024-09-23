@@ -1,4 +1,23 @@
 /* General Styles */
+/* Style for the sound button */
+.sound-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.sound-button:hover {
+    color: #d32f2f;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +33,7 @@ body {
 
 header {
     position: relative;
-    height: 50vh;
+    height: 900px; /* Replaced 50vh with a fixed height for stability */
     background: url('title.jpeg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
@@ -47,6 +66,7 @@ h1 {
     justify-content: center;
     margin: 2rem 0;
     gap: 1rem;
+    flex-wrap: wrap; /* Added to prevent overflow */
 }
 
 .button {
@@ -119,8 +139,6 @@ p {
 .instrument audio {
     width: 100%;
 }
-
-
 
 .instrument img {
     max-width: 100%;

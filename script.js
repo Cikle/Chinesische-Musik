@@ -24,3 +24,16 @@ function showPopup(instrumentId) {
 function closePopup(instrumentId) {
     document.getElementById(instrumentId + '-popup').style.display = 'none';
 }
+
+function toggleSound() {
+    var music = document.getElementById("background-music");
+    var soundButton = document.getElementById("sound-toggle");
+    
+    if (music.muted) {
+        music.muted = false;
+        soundButton.textContent = '🔊'; // Change icon to "sound on"
+    } else {
+        music.muted = true;
+        soundButton.textContent = '🔇'; // Change icon to "sound off"
+    }
+}
