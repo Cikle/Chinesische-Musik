@@ -16,11 +16,6 @@
             <h1>Die Geschichte der chinesischen Musik</h1>
             <img src="photo/title.jpg" alt="Ein Geschichts Projekt" class="title-photo">
         </div>
-        <button id="sound-toggle" class="sound-button" onclick="toggleSound()">🔊</button>
-        <audio id="background-music" loop autoplay>
-            <source src="audio/timeline/Little Apple by Chopstick Brothers [English, Chinese & Pinyin].mp3" type="audio/mp3">
-            Ihr Browser unterstützt das Audio-Tag nicht.
-        </audio>
     </header>
 
     <div class="button-container">
@@ -382,25 +377,6 @@
             document.getElementById(sectionId).style.display = 'block';
             button.classList.add('active');
         }
-        
-        function toggleSound() {
-            var music = document.getElementById("background-music");
-            var soundButton = document.getElementById("sound-toggle");
-            
-            if (music.muted) {
-                music.muted = false;
-                soundButton.textContent = '🔊'; // Change icon to "sound on"
-            } else {
-                music.muted = true;
-                soundButton.textContent = '🔇'; // Change icon to "sound off"
-            }
-        }
-    
-        // Ensure that the audio is not muted by default
-        document.addEventListener('DOMContentLoaded', function() {
-            var music = document.getElementById("background-music");
-            music.muted = false; // Set to false if you want sound by default
-        });
     </script>
     
 </body>
