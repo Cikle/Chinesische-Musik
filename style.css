@@ -1,9 +1,8 @@
 /* General Styles */
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -15,7 +14,7 @@ body {
 
 header {
     position: relative;
-    height: 900px; /* Replaced 50vh with a fixed height for stability */
+    height: 900px;
     background: url('title.jpeg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
@@ -48,7 +47,7 @@ h1 {
     justify-content: center;
     margin: 2rem 0;
     gap: 1rem;
-    flex-wrap: wrap; /* Added to prevent overflow */
+    flex-wrap: wrap;
 }
 
 .button {
@@ -81,11 +80,12 @@ section {
 }
 
 h2 {
-    font-family: 'Noto Serif', serif;
+    text-align: center;
     font-size: 2rem;
-    color: #d32f2f;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
+    color: #333;
 }
+
 
 p {
     font-size: 1.2rem;
@@ -99,23 +99,37 @@ p {
 .instrument-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .instrument {
-    width: 30%;
-    margin: 20px;
+    flex: 1 1 30%;
+    min-width: 250px;
+    max-width: 100%;
     box-sizing: border-box;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .instrument img {
-    max-height: 300px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+audio {
     width: 100%;
-    object-fit: contain;
+    margin-top: 10px;
 }
 
 .instrument p {
-    text-align: justify;
+    flex-grow: 1;
+    margin: 10px 0;
 }
 
 .instrument audio {
@@ -207,7 +221,6 @@ ul.no-bullets li strong {
     margin-bottom: 0.5rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header {
         height: 40vh;
@@ -217,18 +230,8 @@ ul.no-bullets li strong {
         font-size: 2rem;
     }
 
-    .instrument-container {
-        flex-direction: column;
-        align-items: center; /* Centers items horizontally */
-        justify-content: center; /* Centers items vertically */
-    }
-
     .instrument {
-        flex-basis: 100%;
-        width: 90%;
-        max-width: 90%;
-        align-items: center;
-        justify-content: center;
+        flex: 1 1 45%;
     }
 
     .button-container {
@@ -249,11 +252,21 @@ ul.no-bullets li strong {
         font-size: 1.5rem;
     }
 
+    .instrument-container {
+        justify-content: center;
+    }
+
+    .instrument {
+        flex: 1 1 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
     h2 {
         font-size: 1.5rem;
     }
 
     p {
-        font-size: 1rem; /* Adjust paragraph font size for smaller screens */
+        font-size: 1rem;
     }
 }
