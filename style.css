@@ -14,7 +14,7 @@ body {
 
 header {
     position: relative;
-    height: 900px;
+    height: 55rem;
     background: url('title.jpeg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
